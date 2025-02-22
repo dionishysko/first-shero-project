@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorshipHouse Kids Navbar</title>
+    <link rel="icon" href="https://www.worshiphousekids.com/cdn/shop/files/whk_favicon.png?crop=center&height=32&v=1730985310&width=32" type="image/x-icon">
+    <link rel="shortcut icon" href="https://www.worshiphousekids.com/cdn/shop/files/whk_favicon.png?crop=center&height=32&v=1730985310&width=32" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <div class="pink-bar"> WorshipHouse Media</div>
+        <nav class="navbar">
+            <img src="images/backgroundnav.png" alt="Background Wave" class="header-background">
+            <div class="top-row">
+                <div class="hamburger-menu">
+                    <button class="hamburger-button" aria-label="Toggle menu">☰</button>
+                </div>
+
+                <div class="logo">
+                    <img src="images/logo.png" alt="WorshipHouse Kids Logo">
+                </div>
+                <div class="search-bar">
+                    <button><i class="fas fa-search"></i></button>
+                    <input type="text" placeholder="Find kids videos">
+                </div>
+
+                <div class="icons">
+                    <i class="fas fa-user"></i>
+                    <div class="cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-badge">1</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile-menu">
+                <ul class="nav-links">
+                    <li><a href="#">SONG TRACKS</a></li>
+                    <li><a href="#">GAMES</a></li>
+                    <li><a href="#">KIDS VIDEOS</a></li>
+                    <li><a href="#">COUNTDOWNS</a></li>
+                    <li><a href="#">CURRICULUM</a></li>
+                    <li><a href="#">BACKGROUNDS</a></li>
+                    <li><a href="#">THEMES</a></li>
+                    <li><a href="#">ON SALE</a></li>
+                    <li><button class="worshiphouse-btn">WorshipHouse Media</button></li>
+                </ul>
+            </div>
+
+            <div class="search-bar-mobile">
+                <button><i class="fas fa-search"></i></button>
+                <input type="text" placeholder="Find kids videos">
+            </div>
+        </nav>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburgerButton = document.querySelector(".hamburger-button");
+            const mobileMenu = document.querySelector(".mobile-menu");
+
+            hamburgerButton.addEventListener("click", function (event) {
+                event.stopPropagation();
+                mobileMenu.classList.toggle("active");
+            });
+
+            document.addEventListener("click", function (event) {
+                if (!mobileMenu.contains(event.target) && !hamburgerButton.contains(event.target)) {
+                    mobileMenu.classList.remove("active");
+                }
+            });
+        });
+    </script>
+
+    <div class="slideshow-section">
+        <div class="slideshow-images">
+            <img src="images/ultimate-song.png" alt="Slide 1">
+            <img src="images/ultimate-song.png" alt="Slide 2">
+            <img src="images/ultimate-song.png" alt="Slide 3">
+        </div>
+        <div class="nav-buttons-container">
+            <button class="nav-button left-button" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="nav-button right-button" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        function moveSlide(direction) {
+            const slidesContainer = document.querySelector('.slideshow-images');
+            const slides = document.querySelectorAll('.slideshow-images img');
+            const totalSlides = slides.length;
+
+            // Get the width of a single slide
+            const slideWidth = slides[0].clientWidth;
+
+            // Move slide index
+            currentIndex += direction;
+            if (currentIndex < 0) {
+                currentIndex = totalSlides - 1;
+            } else if (currentIndex >= totalSlides) {
+                currentIndex = 0;
+            }
+            // Apply transform to slide container
+            slidesContainer.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+        }
+    </script>
+
+
+    <div class="categories-container">
+        <!-- Navigation Categories -->
+        <div class="title">BEST SELLERS</div>
+
+        <div class="categories" ontouchstart="this.style.overflowX='scroll'" ontouchstart="event.stopPropagation()"
+            ontouchend="this.style.overflowX='hidden'">
+            <button class="category active">ALL PRODUCTS</button>
+            <button class="category">GAMES</button>
+            <button class="category">KIDS VIDEOS</button>
+            <button class="category">COUNTDOWNS</button>
+            <button class="category">MOTIONS</button>
+            <button class="category">STILL BACKGROUNDS</button>
+            <button class="category">CURRICULUM</button>
+        </div>
+
+        <!-- Grid Layout for Cards -->
+        <div class="grid-container">
+            <img src="images/bestseller1.png" alt="Background Wave" class="bestseller1-background">
+            <img src="images/bestseller2.png" alt="Background Wave" class="bestseller2-background">
+
+            <div class="card">
+                <span class="discount">95% off</span>
+                <img src="images/pumpkin.png" alt="Pumpkin Prayers">
+                <div class="card-content">
+                    <h3 class="card-title">Match It! Back To School Edition</h3>
+                    <p class="card-description">Children's Ministry Deals</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <span class="discount">95% off</span>
+                <img src="images/playthegame.png" alt="Play The Game">
+                <div class="card-content">
+                    <h3 class="card-title">Match It! Back To School Edition</h3>
+                    <p class="card-description">Children's Ministry Deals</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <span class="discount">90% off</span>
+                <img src="images/schoolbuss.png" alt="School Bus Collection">
+                <div class="card-content">
+                    <h3 class="card-title">Match It! Back To School Edition</h3>
+                    <p class="card-description">Children's Ministry Deals</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <span class="discount">95% off</span>
+                <img src="images/gonefishin.png" alt="Gone Fishing">
+                <div class="card-content">
+                    <h3 class="card-title">Match It! Back To School Edition</h3>
+                    <p class="card-description">Children's Ministry Deals</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <span class="discount">95% off</span>
+                <img src="images/underthesea.png" alt="Under The Sea">
+                <div class="card-content">
+                    <h3 class="card-title">Match It! Back To School Edition</h3>
+                    <p class="card-description">Children's Ministry Deals</p>
+                </div>
+
+            </div>
+
+            <div class="card">
+                <span class="discount">50% off</span>
+                <img src="images/constructionzone.png" alt="Construction Zone">
+                <div class="card-content">
+
+                    <h3 class="card-title">Match It! Back To School Edition</h3>
+                    <p class="card-description">Children's Ministry Deals</p>
+                </div>
+
+            </div>
+
+            <div class="card">
+                <span class="discount">50% off</span>
+                <img src="images/kidsthanksgiving.png" alt="Kids Thanksgiving">
+                <div class="card-content">
+                    <h3 class="card-title">Match It! Back To School Edition</h3>
+                    <p class="card-description">Children's Ministry Deals</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <span class="discount">95% off</span>
+                <img src="images/kidswrship.png" alt="Kids Worship Essentials">
+                <div class="card-content">
+                    <h3 class="card-title">Match It! Back To School Edition</h3>
+                    <p class="card-description">Children's Ministry Deals</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- PLAY FOR FREE Banner -->
+    <div class="two-column-container">
+        <div class="play-banner">
+            <div class="play-banner-content">
+                <template id="banner-template">
+                    <span class="circle"></span>
+                    <span class="outline-text">PLAY FOR FREE</span>
+                </template>
+            </div>
+            <div class="play-banner-content">
+                <template id="banner-template">
+                    <span class="circle"></span>
+                    <span class="outline-text">PLAY FOR FREE</span>
+                </template>
+            </div>
+            <div class="play-banner-content">
+                <template id="banner-template">
+                    <span class="circle"></span>
+                    <span class="outline-text">PLAY FOR FREE</span>
+                </template>
+            </div>
+        </div>
+
+        <div class="game-section">
+            <div class="game-container">
+                <div class="game-image">
+                    <img src="images/lunchbox-shuffle.png" alt="Lunchbox Shuffle">
+                </div>
+                <div class="game-content">
+                    <h2>Lunchbox Shuffle</h2>
+                    <p class="subtitle">Children's Ministry Deals</p>
+                    <p class="description">
+                        This game video will challenge kids to keep track of specific lunch boxes
+                        as they are shuffled around on the screen.
+                        Whoever gets the most right, wins!
+                    </p>
+                    <button class="play-button">Play Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="free-stuff-section">
+        <div class="free-stuff-content">
+            <h2>Want more free stuff?</h2>
+            <p>
+                Enter your email and we’ll send you KidMin ideas, special offers,
+                and FREE children’s video downloads throughout the month.
+            </p>
+
+            <!-- Email Input -->
+            <div class="email-input">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="Enter your email address">
+            </div>
+            <button class="play-now-btn">Play Now</button>
+        </div>
+
+        <!-- Right Side: Image -->
+        <div class="free-stuff-image">
+            <img src="images/is-that-really-in-the-bible_750x250.png" alt="September Freebie">
+        </div>
+    </div>
+
+    <div class="categories-container">
+        <div class="title2">THE LATEST</div>
+        <div class="categories" ontouchstart="this.style.overflowX='scroll'" ontouchstart="event.stopPropagation()"
+            ontouchend="this.style.overflowX='hidden'">
+
+            <button class="category2">ALL</button>
+            <button class="category2 active">GAMES</button>
+            <button class="category2">KIDS VIDEOS</button>
+            <button class="category2">COUNTDOWNS</button>
+            <button class="category2">MOTIONS</button>
+            <button class="category2">STILL BACKGROUNDS</button>
+            <button class="category2">CURRICULUM</button>
+        </div>
+
+        <!-- Grid Layout for Cards -->
+        <div class="grid-container2">
+            <img src="images/the latest.png" alt="Background Wave" class="thelatest-background">
+            <img src="images/the latest2.png" alt="Background Wave" class="thelatest2-background">
+
+            <div class="card">
+                <img src="images/gonefishin.png" alt="Gone Fishing">
+                <div class="card-content">
+                    <h3 class="card-title">Match It! Back To School Edition</h3>
+                    <p class="card-description">Children's Ministry Deals</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/matchit.png" alt="Match It">
+                <div class="card-content">
+                    <h3 class="card-title">Match It! Back To School Edition</h3>
+                    <p class="card-description">Children's Ministry Deals</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/pumpkin.png" alt="Pumpkin Prayers">
+                <div class="card-content">
+                    <h3 class="card-title">Match It! Back To School Edition</h3>
+                    <p class="card-description">Children's Ministry Deals</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/childgod.png" alt="Child God">
+                <div class="card-content">
+                    <h3 class="card-title">Match It! Back To School Edition</h3>
+                    <p class="card-description">Children's Ministry Deals</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/gamer.png" alt="Gamer">
+                <div class="card-content">
+                    <h3 class="card-title">Match It! Back To School Edition</h3>
+                    <p class="card-description">Children's Ministry Deals</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/constructionzone.png" alt="Construction Zone">
+                <div class="card-content">
+                    <h3 class="card-title">Match It! Back To School Edition</h3>
+                    <p class="card-description">Children's Ministry Deals</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/schoolbuss.png" alt="Schoolbuss Collection">
+                <div class="card-content">
+                    <h3 class="card-title">Match It! Back To School Edition</h3>
+                    <p class="card-description">Children's Ministry Deals</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/cosmic-wonder.png" alt="cosmic-wonder">
+                <div class="card-content">
+                    <h3 class="card-title">Match It! Back To School Edition</h3>
+                    <p class="card-description">Children's Ministry Deals</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-section2">
+        <div class="game-container">
+            <div class="game-image2">
+                <img src="images/cosmic-wonder.png" alt="cosmic-wonder">
+            </div>
+            <div class="game-content">
+                <h2>Cosmic Wonder</h2>
+                <p class="subtitle">Children's Ministry Deals</p>
+                <p class="description">
+                    This game video will challenge kids to keep track of specific
+                    lunch boxes as they are shuffled around on the screen.
+                    Whoever gets the most right, wins!
+                </p>
+                <button class="play-button">Play Now</button>
+            </div>
+        </div>
+    </div>
+
+    <section class="carousel-section">
+        <h2 class="carousel-title">FEATURED GAMES</h2>
+        <div class="carousel-wrapper">
+            <button id="prevBtn" class="nav-btn">&#10094;</button>
+            <div class="carousel">
+                <div class="carousel-track"></div>
+            </div>
+            <button id="nextBtn" class="nav-btn">&#10095;</button>
+        </div>
+    </section>
+    <script src="script.js"></script>
+
+
+
+    <section class="testimonials">
+        <h2 class="testimonial-title">WHAT THEY SAY ABOUT US</h2>
+        <div class="testimonial-carousel">
+            <div class="testimonial-track">
+                <div class="testimonial-card">
+                    <div class="quote-box">
+                        <span class="quote">❝</span>
+                    </div>
+                    <h3>Darlene Robertson</h3>
+                    <p>Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                        ad minim veniam.</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-box">
+                        <span class="quote">❝</span>
+                    </div>
+                    <h3>Annette Black</h3>
+                    <p>Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                        ad minim veniam.</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-box">
+                        <span class="quote">❝</span>
+                    </div>
+                    <h3>Theresa Webb</h3>
+                    <p>Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                        ad minim veniam.</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-box">
+                        <span class="quote">❝</span>
+                    </div>
+                    <h3>John Doe</h3>
+                    <p>Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                        ad minim veniam.</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-box">
+                        <span class="quote">❝</span>
+                    </div>
+                    <h3>Jane Smith</h3>
+                    <p>Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                        ad minim veniam.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <section class="new-products-section">
+        <h2 class="new-products-title">NEW PRODUCTS</h2>
+        <div class="glide new-carousel-container">
+            <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+                    <img src="images/Vector.png" alt="Left">
+                </button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                    <img src="images/Vector.png" alt="Right">
+                </button>
+            </div>
+
+            <div class="glide__track new-carousel" data-glide-el="track">
+                <div class="glide__slides new-carousel-track" style="padding: 20px;">
+                    <div class="glide__slide new-carousel-item">
+                        <div class="new-product-card">
+                            <div class="new-product-image">
+                                <span class="new-discount">50% off</span>
+                                <img src="images/gonefishin.png" alt="Gone Fishin'">
+                            </div>
+                            <div class="new-product-details">
+                                <h3>Match It! Back To School Edition</h3>
+                                <p>Children's Ministry Deals</p>
+                                <div class="new-price">
+                                    <span class="new-current-price">$10.00</span>
+                                    <span class="new-old-price">$20.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glide__slide new-carousel-item">
+                        <div class="new-product-card">
+                            <div class="new-product-image">
+                                <img src="images/this-is-out-god-hand-motions.png" alt="This Is Our God">
+                            </div>
+                            <div class="new-product-details">
+                                <h3>Match It! Back To School Edition</h3>
+                                <p>Children's Ministry Deals</p>
+                                <div class="new-price">
+                                    <span class="new-current-price">$10.00</span>
+                                    <span class="new-old-price">$20.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glide__slide new-carousel-item">
+                        <div class="new-product-card">
+                            <div class="new-product-image">
+                                <img src="images/match-it-beach-edition.png" alt="Match It Beach Edition">
+                            </div>
+                            <div class="new-product-details">
+                                <h3>Match It! Back To School Edition</h3>
+                                <p>Children's Ministry Deals</p>
+                                <div class="new-price">
+                                    <span class="new-current-price">$10.00</span>
+                                    <span class="new-old-price">$20.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glide__slide new-carousel-item">
+                        <div class="new-product-card">
+                            <div class="new-product-image">
+                                <span class="new-discount">50% off</span>
+                                <img src="images/pumkin-prayers.png" alt="Pumpkin Prayers">
+                            </div>
+                            <div class="new-product-details">
+                                <h3>Match It! Back To School Edition</h3>
+                                <p>Children's Ministry Deals</p>
+                                <div class="new-price">
+                                    <span class="new-current-price">$10.00</span>
+                                    <span class="new-old-price">$20.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            new Glide(".glide", {
+                type: "carousel",
+                perView: 4,
+                gap: 20,
+                rewind: false,
+                bound: true,
+                animationDuration: 600,
+                autoplay: 2000,
+                perTouch: 1,
+                breakpoints: {
+                    1200: { perView: 3 },
+                    1024: { perView: 3 },
+                    768: { perView: 2 },
+                    480: { perView: 1 }
+                }
+            }).mount();
+        });
+    </script>
+
+    <section class="blog-section">
+        <div class="blog-intro">
+            <h2>Latest from Worshiphouse Kids Blog!</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.</p>
+            <div class="blog-filters">
+                <button class="filter-btn active">Show All</button>
+                <button class="filter-btn">Uncategorized</button>
+                <button class="filter-btn">Easter</button>
+                <button class="filter-btn">Seasonal</button>
+            </div>
+        </div>
+
+        <!-- Glide Carousel Container  -->
+        <div class="blog-carousel-container">
+            <div class="blog-carousel">
+                <div class="blog-card">
+                    <img src="images/name_that_noise (1).png" alt="Blog 1">
+                    <div class="blog-info">
+                        <p class="blog-date">June 7, 2024 | By Mariah Tovar</p>
+                        <h3>6 Father's Day Motion Backgrounds for Your Sunday Service</h3>
+                        <p class="blog-desc">Shift Worship has a vast amount of motion backgrounds that are perfect for
+                            adding that
+                            something special to your worship experiences.
+                            The best part? We have media that you can use for every occasion. </p>
+                        <a href="#">Read More →</a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <img src="images/top_resurrection_media.png" alt="Blog 2">
+                    <div class="blog-info">
+                        <p class="blog-date">April 11, 2024 | By Mariah Tovar</p>
+                        <h3>Custom Mother's Day Backgrounds with Shift Worship</h3>
+                        <p class="blog-desc">Using motion graphics in your Mother’s Day service is great for celebrating
+                            the amazing mothers
+                            (and mother figures) in the community, highlighting strong pillars in the church, and
+                            setting examples...</p>
+                        <a href="#">Read More →</a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <img src="images/praise_you_anywhere_motion.png" alt="Blog 3">
+                    <div class="blog-info">
+                        <p class="blog-date">April 11, 2024 | By Mariah Tovar</p>
+                        <h3>Top Resurrection Media</h3>
+                        <p class="blog-desc">Using motion graphics in your Mother’s Day service is great for celebrating
+                            the amazing mothers
+                            (and mother figures) in the community, highlighting strong pillars in the church, and
+                            setting examples...</p>
+                        <a href="#">Read More →</a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <img src="images/praise_you_anywhere_motion.png" alt="Blog 3">
+                    <div class="blog-info">
+                        <p class="blog-date">April 11, 2024 | By Mariah Tovar</p>
+                        <h3>Top Resurrection Media</h3>
+                        <p class="blog-desc">Using motion graphics in your Mother’s Day service is great for celebrating
+                            the amazing mothers
+                            (and mother figures) in the community, highlighting strong pillars in the church, and
+                            setting examples...</p>
+                        <a href="#">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <!-- <img src="images/vektor.png" alt="vektor" class="footer-image"> -->
+        <div class="footer-container">
+
+            <!-- Left Section -->
+            <div class="footer-left">
+                <div class="logo">
+                    <img src="images/logo.png" alt="WorshipHouse Kids Logo">
+                </div>
+                <p>WorshipHouse Kids offers children's worship media resources to help make learning about God fun,
+                    interactive, and meaningful. You can find the best in kids' worship videos, Christian worship
+                    songs, backgrounds, and church curriculum to make a lasting imprint on the lives of tomorrow's
+                    church.</p>
+
+                <!-- Social Icons -->
+                <div class="footer-icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+
+            <!-- Middle Section -->
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">On Sale</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">WHK KidMin Blog</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Submit Media</a></li>
+                    <li><a href="#">Streaming Information</a></li>
+                    <li><a href="#">License Agreement</a></li>
+                    <li><a href="#">CCPA – Do Not Sell My Info</a></li>
+                    <li><a href="#">California – CCPA Notice</a></li>
+                </ul>
+            </div>
+
+            <!-- Right Section -->
+            <div class="footer-newsletter">
+                <h3>Subscribe to our newsletter</h3>
+                <p>Enter your email and we'll send you KidMin ideas, special offers, and FREE children's video
+                    downloads throughout the month.</p>
+                <form class="newsletter-form">
+                    <div class="email-input">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Enter your email address">
+                    </div>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            © 2024 WorshipHouse Kids. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+
+</html>

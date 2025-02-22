@@ -1,0 +1,3139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work sans", sans-serif;
+    font-weight: 600;
+}
+
+body {
+    background-color: #f5f5f5;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+.header-background {
+    position: absolute;
+    z-index: 0;
+    width: 600px;
+    top: 0;
+    left: -10px;
+}
+
+/* First Row (Logo, Search Bar, Icons) */
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    gap: 10px;
+}
+
+.logo img {
+    max-width: 100%;
+    z-index: 1;
+    position: relative;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+    flex-grow: 1;
+    max-width: 891px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    clip-path: polygon(98.415% 100%,
+            1.951% 100%,
+            1.951% 100%,
+            1.655% 99.554%,
+            1.379% 98.271%,
+            1.125% 96.239%,
+            0.9% 93.543%,
+            0.706% 90.268%,
+            0.549% 86.5%,
+            0.432% 82.325%,
+            0.36% 77.829%,
+            0.336% 73.096%,
+            0.367% 68.214%,
+            0.959% 16.429%,
+            0.959% 16.429%,
+            1.003% 13.669%,
+            1.069% 11.086%,
+            1.155% 8.706%,
+            1.26% 6.557%,
+            1.38% 4.665%,
+            1.514% 3.057%,
+            1.661% 1.76%,
+            1.818% 0.8%,
+            1.984% 0.204%,
+            2.156% 0%,
+            98.21% 0%,
+            98.21% 0%,
+            98.382% 0.2%,
+            98.548% 0.783%,
+            98.705% 1.726%,
+            98.852% 3.006%,
+            98.987% 4.598%,
+            99.107% 6.48%,
+            99.211% 8.628%,
+            99.297% 11.017%,
+            99.363% 13.625%,
+            99.407% 16.429%,
+            100% 68.214%,
+            100% 68.214%,
+            100.03% 73.096%,
+            100.007% 77.829%,
+            99.935% 82.325%,
+            99.818% 86.5%,
+            99.66% 90.268%,
+            99.467% 93.543%,
+            99.241% 96.239%,
+            98.988% 98.271%,
+            98.711% 99.554%,
+            98.415% 100%);
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 100%;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #00aaff;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(66, 204, 246, 1);
+    min-width: 120px;
+    min-height: 56px;
+    clip-path: polygon(100% 31.786%,
+            96.488% 83.571%,
+            96.488% 83.571%,
+            96.227% 86.331%,
+            95.837% 88.914%,
+            95.327% 91.294%,
+            94.71% 93.443%,
+            93.997% 95.335%,
+            93.201% 96.943%,
+            92.331% 98.24%,
+            91.4% 99.2%,
+            90.419% 99.796%,
+            89.4% 100%,
+            12.771% 100%,
+            12.771% 100%,
+            11.752% 99.796%,
+            10.771% 99.2%,
+            9.84% 98.24%,
+            8.971% 96.943%,
+            8.174% 95.335%,
+            7.461% 93.443%,
+            6.844% 91.294%,
+            6.335% 88.914%,
+            5.944% 86.331%,
+            5.683% 83.571%,
+            2.171% 31.786%,
+            2.171% 31.786%,
+            1.993% 26.904%,
+            2.13% 22.171%,
+            2.557% 17.675%,
+            3.25% 13.5%,
+            4.183% 9.732%,
+            5.33% 6.457%,
+            6.666% 3.761%,
+            8.167% 1.729%,
+            9.806% 0.446%,
+            11.558% 0%,
+            90.613% 0%,
+            90.613% 0%,
+            92.366% 0.446%,
+            94.005% 1.729%,
+            95.505% 3.761%,
+            96.841% 6.457%,
+            97.989% 9.732%,
+            98.921% 13.5%,
+            99.614% 17.675%,
+            100.041% 22.171%,
+            100.179% 26.904%,
+            100% 31.786%);
+}
+
+.icons i {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.cart {
+    position: relative;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 3px 6px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.nav-links button {
+    width: 250px;
+    height: 50px;
+    background-color: rgba(107, 217, 253, 1);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.worshiphouse-btn {
+    width: 250px;
+    height: 50px;
+    background-color: rgba(107, 217, 253, 1);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    clip-path: polygon(100% 31.786%,
+            97.914% 83.571%,
+            97.914% 83.571%,
+            97.759% 86.331%,
+            97.527% 88.914%,
+            97.224% 91.294%,
+            96.857% 93.443%,
+            96.434% 95.335%,
+            95.961% 96.943%,
+            95.444% 98.24%,
+            94.891% 99.2%,
+            94.308% 99.796%,
+            93.703% 100%,
+            7.587% 100%,
+            7.587% 100%,
+            6.982% 99.796%,
+            6.399% 99.2%,
+            5.846% 98.24%,
+            5.329% 96.943%,
+            4.856% 95.335%,
+            4.432% 93.443%,
+            4.066% 91.294%,
+            3.763% 88.914%,
+            3.531% 86.331%,
+            3.376% 83.571%,
+            1.29% 31.786%,
+            1.29% 31.786%,
+            1.184% 26.904%,
+            1.265% 22.171%,
+            1.519% 17.675%,
+            1.931% 13.5%,
+            2.485% 9.732%,
+            3.166% 6.457%,
+            3.96% 3.761%,
+            4.852% 1.729%,
+            5.825% 0.446%,
+            6.866% 0%,
+            94.423% 0%,
+            94.423% 0%,
+            95.464% 0.446%,
+            96.438% 1.729%,
+            97.33% 3.761%,
+            98.124% 6.457%,
+            98.805% 9.732%,
+            99.359% 13.5%,
+            99.771% 17.675%,
+            100.025% 22.171%,
+            100.106% 26.904%,
+            100% 31.786%);
+}
+
+.worshiphouse-btn:hover {
+    animation: wobble 2s ease
+}
+
+.navbar {
+    background: linear-gradient(to right, #2db2ff, #00aaff);
+    padding: 15px 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    position: relative;
+    width: 100%;
+}
+
+/*  Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1001;
+}
+
+.search-bar-mobile {
+    display: none;
+}
+
+.pink-bar {
+    display: none;
+    background: #ff3cac;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+    .hamburger-menu {
+        display: none;
+    }
+
+    .header-background {
+        max-width: 300px;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .top-row {
+        position: relative;
+        z-index: 101;
+        width: 100%;
+    }
+
+    .nav-links {
+        justify-content: space-between;
+        gap: 20px;
+        align-items: center;
+        margin-top: 10px;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .pink-bar {
+        display: block;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .top-row {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+
+    .logo {
+        text-align: center;
+        flex: 1;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .hamburger-button {
+        display: block !important;
+        font-size: 20px;
+        color: white;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(107, 217, 253, 1);
+        z-index: 1000;
+        overflow-y: auto;
+    }
+
+    .mobile-menu.active {
+        display: block;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 40px 20px;
+    }
+
+    .nav-links li a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+    }
+    .search-bar {
+        display: none;
+    }
+
+    .search-bar-mobile {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        background-color: white;
+        width: 90%;
+        margin: 20px auto;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-bar-mobile input {
+        border: none;
+        outline: none;
+        padding: 5px;
+        width: 100%;
+        flex-grow: 1;
+    }
+
+    .search-bar-mobile button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #00aaff;
+    }
+}
+
+/* Container for the section */
+.slideshow-section {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
+    margin: 100px auto;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Image display area */
+.slideshow-images {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+/* Navigation buttons container */
+.nav-buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/* Navigation buttons */
+.nav-button {
+    background-color: rgb(246, 48, 81);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    margin: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    pointer-events: auto;
+}
+
+.left-button {
+    background-color: #f799ca;
+}
+
+/* Right Arrow - Bright Pink */
+.right-button {
+    background-color: #f466af;
+}
+
+/*     Tablet View (1024px and below) */
+@media (max-width: 1024px) {
+    .slideshow-section {
+        width: 90%;
+        margin: 80px auto;
+    }
+
+    .slideshow-images img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .nav-button {
+        padding: 12px 18px;
+        font-size: 16px;
+    }
+}
+
+/*     Mobile View (768px and below) */
+@media (max-width: 768px) {
+    .slideshow-section {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    .slideshow-images {
+        width: 100%;
+    }
+
+    .slideshow-images img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .nav-buttons-container {
+        margin-top: 10px;
+    }
+
+    .nav-button {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+}
+
+/*     Small Mobile View (480px and below) */
+@media (max-width: 480px) {
+    .slideshow-section {
+        width: 100%;
+        margin: 40px auto;
+    }
+
+    .slideshow-images img {
+        width: 100%;
+        max-height: 250px;
+        object-fit: contain;
+    }
+
+    .nav-button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
+
+.title {
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 50px;
+    color: #ec007a;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Category Container */
+.categories-container {
+    background: none;
+    position: relative;
+    padding: 60px 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Category Tabs */
+.categories {
+    display: flex;
+    gap: 0.4rem;
+    padding-top: 1%;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 0;
+    margin-left: 7%;
+    border: none;
+    display: inline-flex;
+
+}
+
+.categories::-webkit-scrollbar {
+    display: none;
+}
+
+/* Category Buttons */
+.category {
+    background: #ffcbe4;
+    border: 0;
+    padding: 12px 18px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    min-width: 120px;
+    height: 60px;
+    text-align: center;
+    color: #444;
+    clip-path: polygon(100% 100%,
+            0.261% 100%,
+            0.261% 100%,
+            0.96% 99.87%,
+            1.541% 99.468%,
+            2.021% 98.778%,
+            2.414% 97.784%,
+            2.736% 96.469%,
+            3.002% 94.816%,
+            3.227% 92.809%,
+            3.427% 90.432%,
+            3.616% 87.668%,
+            3.81% 84.5%,
+            3.81% 84.5%,
+            3.978% 81.338%,
+            4.204% 76.678%,
+            4.478% 70.785%,
+            4.789% 63.924%,
+            5.127% 56.359%,
+            5.48% 48.356%,
+            5.839% 40.179%,
+            6.191% 32.092%,
+            6.527% 24.361%,
+            6.836% 17.25%,
+            6.836% 17.25%,
+            7.021% 14.367%,
+            7.324% 11.664%,
+            7.734% 9.169%,
+            8.241% 6.912%,
+            8.835% 4.922%,
+            9.504% 3.228%,
+            10.24% 1.86%,
+            11.031% 0.846%,
+            11.867% 0.216%,
+            12.738% 0%,
+            87.523% 0%,
+            87.523% 0%,
+            88.404% 0.216%,
+            89.246% 0.846%,
+            90.039% 1.86%,
+            90.776% 3.228%,
+            91.446% 4.922%,
+            92.039% 6.912%,
+            92.547% 9.169%,
+            92.96% 11.664%,
+            93.268% 14.367%,
+            93.463% 17.25%,
+            93.463% 17.25%,
+            93.761% 24.361%,
+            94.089% 32.092%,
+            94.435% 40.179%,
+            94.789% 48.356%,
+            95.139% 56.359%,
+            95.475% 63.924%,
+            95.785% 70.785%,
+            96.058% 76.678%,
+            96.284% 81.338%,
+            96.451% 84.5%,
+            96.451% 84.5%,
+            96.645% 87.668%,
+            96.835% 90.432%,
+            97.034% 92.809%,
+            97.259% 94.816%,
+            97.525% 96.469%,
+            97.847% 97.784%,
+            98.24% 98.778%,
+            98.72% 99.468%,
+            99.302% 99.87%,
+            100% 100%);
+}
+
+.category.active {
+    background: #f466af;
+    color: white;
+    font-size: 16px;
+    padding: 16px 22px;
+    transform: scale(1.1);
+    clip-path: polygon(100% 100%,
+            0.261% 100%,
+            0.261% 100%,
+            0.96% 99.87%,
+            1.541% 99.468%,
+            2.021% 98.778%,
+            2.414% 97.784%,
+            2.736% 96.469%,
+            3.002% 94.816%,
+            3.227% 92.809%,
+            3.427% 90.432%,
+            3.616% 87.668%,
+            3.81% 84.5%,
+            3.81% 84.5%,
+            3.978% 81.338%,
+            4.204% 76.678%,
+            4.478% 70.785%,
+            4.789% 63.924%,
+            5.127% 56.359%,
+            5.48% 48.356%,
+            5.839% 40.179%,
+            6.191% 32.092%,
+            6.527% 24.361%,
+            6.836% 17.25%,
+            6.836% 17.25%,
+            7.021% 14.367%,
+            7.324% 11.664%,
+            7.734% 9.169%,
+            8.241% 6.912%,
+            8.835% 4.922%,
+            9.504% 3.228%,
+            10.24% 1.86%,
+            11.031% 0.846%,
+            11.867% 0.216%,
+            12.738% 0%,
+            87.523% 0%,
+            87.523% 0%,
+            88.404% 0.216%,
+            89.246% 0.846%,
+            90.039% 1.86%,
+            90.776% 3.228%,
+            91.446% 4.922%,
+            92.039% 6.912%,
+            92.547% 9.169%,
+            92.96% 11.664%,
+            93.268% 14.367%,
+            93.463% 17.25%,
+            93.463% 17.25%,
+            93.761% 24.361%,
+            94.089% 32.092%,
+            94.435% 40.179%,
+            94.789% 48.356%,
+            95.139% 56.359%,
+            95.475% 63.924%,
+            95.785% 70.785%,
+            96.058% 76.678%,
+            96.284% 81.338%,
+            96.451% 84.5%,
+            96.451% 84.5%,
+            96.645% 87.668%,
+            96.835% 90.432%,
+            97.034% 92.809%,
+            97.259% 94.816%,
+            97.525% 96.469%,
+            97.847% 97.784%,
+            98.24% 98.778%,
+            98.72% 99.468%,
+            99.302% 99.87%,
+            100% 100%);
+}
+
+/* Cards Section */
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: 40px;
+    padding-left: 120px;
+    padding-right: 120px;
+    margin: 0 auto;
+    background-color: #f466af;
+    background-size: cover;
+    overflow: hidden;
+    z-index: 1;
+    clip-path: polygon(100% 0%,
+            100% 79.725%,
+            100% 79.725%,
+            99.832% 83.999%,
+            99.377% 87.428%,
+            98.706% 90.104%,
+            97.892% 92.122%,
+            97.005% 93.573%,
+            96.119% 94.552%,
+            95.304% 95.151%,
+            94.633% 95.464%,
+            94.178% 95.583%,
+            94.01% 95.602%,
+            1.052% 100%,
+            0% 100%,
+            0% 0%,
+            100% 0%);
+}
+
+.bestseller1-background {
+    position: absolute;
+    z-index: -1;
+    left: 1px;
+    width: 10%;
+}
+
+.bestseller2-background {
+    position: absolute;
+    z-index: -1;
+    right: 2px;
+    width: 235px;
+    height: 231px;
+}
+
+/* Individual Card */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    flex: 1 1 calc(25% - 16px);
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Card Image */
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+/* Card Text */
+.card .card-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 8px;
+}
+
+.card .card-description {
+    color: #555;
+    margin: 0;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+/* Discount Label */
+.discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Hover Effects */
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/*     Tablet View (1024px and below) */
+@media (max-width: 1024px) {
+    .categories-container {
+        display: flex;
+        overflow-x: scroll;
+        flex-wrap: nowrap;
+        padding: 0px;
+    }
+
+    .category {
+        flex-shrink: 0;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+        overflow: hidden;
+    }
+}
+
+/*     Mobile View (768px and below) */
+@media (max-width: 768px) {
+    .categories {
+        display: inline-flex;
+        gap: 8px;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        width: 100%;
+        margin-bottom: 0;
+        touch-action: pan-x;
+    }
+
+    .categories::-webkit-scrollbar {
+        display: none;
+    }
+
+    .category {
+        background: #ffcbe4;
+        border: 0;
+        padding: 12px 16px;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+        min-width: 100px;
+        border-radius: 10px;
+        text-align: center;
+        color: #444;
+        flex-shrink: 0;
+    }
+
+    .category.active {
+        background: #f466af;
+        color: white;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        padding: 20px;
+        margin-top: 0;
+    }
+
+    .card {
+        background-color: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .card-content {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .card-title {
+        font-size: 14px;
+        font-weight: bold;
+        margin: 8px 0 4px;
+    }
+
+    .card-description {
+        font-size: 12px;
+        color: #555;
+    }
+
+    .discount {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        background: red;
+        color: white;
+        font-size: 10px;
+        font-weight: bold;
+        padding: 4px 6px;
+        border-radius: 5px;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+}
+
+.two-column-container {
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: #b3f6ff;
+    padding-top: 130px;
+    padding-bottom: 100px;
+    margin-top: 85px;
+    margin-bottom: 125px;
+    border-top-left-radius: 120px;
+    border-bottom-right-radius: 120px;
+}
+
+/* PLAY FOR FREE Banner */
+.play-banner {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #f2785f;
+    border-bottom: 12px solid #ff3da1;
+    transform: rotate(-1.422deg);
+    padding-top: 17px;
+    top: -90px;
+    overflow: hidden;
+}
+
+.play-banner-content {
+    animation: scrollBanner 10s linear infinite;
+    -webkit-text-stroke-width: 2px !important;
+    -webkit-text-stroke-color: #ffffff;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 900;
+    color: transparent !important;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+/* Text with Outline Effect */
+.play-banner-content span {
+    font-weight: 900;
+    font-size: 32px;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    letter-spacing: 2px;
+}
+
+@keyframes scrollBanner {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Circles between the text */
+.play-banner .circle {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    display: inline-block;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+/* Game Section Background */
+.game-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 1628px;
+    margin: auto;
+    gap: 1px;
+}
+
+/* Game Container */
+.game-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 1628px;
+    margin: auto;
+    gap: 1px;
+}
+
+.game-image img {
+    border-radius: 10px;
+    display: block;
+    box-shadow: -50px -50px rgb(84, 200, 244, 0.49);
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* Game Content */
+.game-content {
+    text-align: center;
+    margin-left: 30px;
+    width: 538px;
+    height: 157px;
+}
+
+.game-content h2 {
+    margin: 0;
+    color: var(--black, #000);
+    text-align: center;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.subtitle {
+    color: var(--Grey, #656565);
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+    padding: 10px;
+}
+
+.description {
+    color: var(--Grey, #656565);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Play Button */
+.play-button {
+    background: #ff4f9a;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    width: 351px;
+    height: 56px;
+    clip-path: polygon(100% 31.786%,
+            97.914% 83.571%,
+            97.914% 83.571%,
+            97.759% 86.331%,
+            97.527% 88.914%,
+            97.224% 91.294%,
+            96.857% 93.443%,
+            96.434% 95.335%,
+            95.961% 96.943%,
+            95.444% 98.24%,
+            94.891% 99.2%,
+            94.308% 99.796%,
+            93.703% 100%,
+            7.587% 100%,
+            7.587% 100%,
+            6.982% 99.796%,
+            6.399% 99.2%,
+            5.846% 98.24%,
+            5.329% 96.943%,
+            4.856% 95.335%,
+            4.432% 93.443%,
+            4.066% 91.294%,
+            3.763% 88.914%,
+            3.531% 86.331%,
+            3.376% 83.571%,
+            1.29% 31.786%,
+            1.29% 31.786%,
+            1.184% 26.904%,
+            1.265% 22.171%,
+            1.519% 17.675%,
+            1.931% 13.5%,
+            2.485% 9.732%,
+            3.166% 6.457%,
+            3.96% 3.761%,
+            4.852% 1.729%,
+            5.825% 0.446%,
+            6.866% 0%,
+            94.423% 0%,
+            94.423% 0%,
+            95.464% 0.446%,
+            96.438% 1.729%,
+            97.33% 3.761%,
+            98.124% 6.457%,
+            98.805% 9.732%,
+            99.359% 13.5%,
+            99.771% 17.675%,
+            100.025% 22.171%,
+            100.106% 26.904%,
+            100% 31.786%);
+}
+
+.play-button:hover {
+    transform: scale(1.05);
+    animation: wobble 2s ease
+}
+
+/*     Tablet View (1024px and below) */
+@media (max-width: 1024px) {
+    .game-container {
+        flex-direction: column;
+        max-width: 100%;
+        margin: 50px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .game-image img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        box-shadow: -30px -30px rgb(84, 200, 244, 0.49);
+    }
+
+    .game-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .game-content h2 {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .description {
+        font-size: 13px;
+        width: auto;
+    }
+
+    .play-button {
+        width: 250px;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .play-banner {
+        font-size: 30px;
+        width: auto;
+        white-space: nowrap;
+        margin-top: 30px;
+    }
+
+    .play-banner-content span {
+        font-size: 28px;
+    }
+}
+
+/*     Mobile View (768px and below) */
+@media (max-width: 768px) {
+    .game-section {
+        border-radius: 50px;
+    }
+
+    .game-container {
+        flex-direction: column;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .game-image img {
+        width: 100%;
+        height: auto;
+        box-shadow: -20px -20px rgb(84, 200, 244, 0.49);
+    }
+
+    .game-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 5% 0 0 0;
+        border-radius: 60px 0px / 60px 39px;
+    }
+
+    .game-content h2 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .subtitle {
+        font-size: 13px;
+    }
+
+    .description {
+        font-size: 12px;
+        width: auto;
+        margin: 8px 0;
+    }
+
+    .play-button {
+        width: 220px;
+        height: 45px;
+        font-size: 13px;
+    }
+
+    .play-banner {
+        font-size: 25px;
+        width: auto;
+        white-space: nowrap;
+        margin-top: 20px;
+    }
+
+    .play-banner-content span {
+        font-size: 24px;
+    }
+}
+
+/*     Small Mobile View (480px and below) */
+@media (max-width: 480px) {
+    .game-section {
+        padding: 30px 5px;
+        border-radius: 30px;
+    }
+
+    .game-container {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .game-image img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        box-shadow: -10px -10px rgb(84, 200, 244, 0.49);
+    }
+
+    .game-content h2 {
+        font-size: 18px;
+    }
+
+    .subtitle {
+        font-size: 12px;
+    }
+
+    .description {
+        font-size: 11px;
+    }
+
+    .play-button {
+        width: 200px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .play-banner {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .play-banner-content span {
+        font-size: 20px;
+    }
+}
+
+/* Free Stuff Section */
+.free-stuff-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ff3da1;
+    padding: 50px;
+    border-radius: 20px;
+    margin: 100px auto;
+    width: 1644px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Left Side Content */
+.free-stuff-content {
+    flex: 1;
+    color: white;
+    padding-left: 50px;
+    max-width: 517px;
+}
+
+/* Title */
+.free-stuff-content h2 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42.23px;
+    letter-spacing: 0%;
+    margin-bottom: 10px;
+}
+
+/* Paragraph */
+.free-stuff-content p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    margin-bottom: 20px;
+}
+
+/* Email Input */
+.email-input {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 14px 18px;
+    gap: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    clip-path: polygon(98.415% 100%,
+            1.951% 100%,
+            1.951% 100%,
+            1.655% 99.554%,
+            1.379% 98.271%,
+            1.125% 96.239%,
+            0.9% 93.543%,
+            0.706% 90.268%,
+            0.549% 86.5%,
+            0.432% 82.325%,
+            0.36% 77.829%,
+            0.336% 73.096%,
+            0.367% 68.214%,
+            0.959% 16.429%,
+            0.959% 16.429%,
+            1.003% 13.669%,
+            1.069% 11.086%,
+            1.155% 8.706%,
+            1.26% 6.557%,
+            1.38% 4.665%,
+            1.514% 3.057%,
+            1.661% 1.76%,
+            1.818% 0.8%,
+            1.984% 0.204%,
+            2.156% 0%,
+            98.21% 0%,
+            98.21% 0%,
+            98.382% 0.2%,
+            98.548% 0.783%,
+            98.705% 1.726%,
+            98.852% 3.006%,
+            98.987% 4.598%,
+            99.107% 6.48%,
+            99.211% 8.628%,
+            99.297% 11.017%,
+            99.363% 13.625%,
+            99.407% 16.429%,
+            100% 68.214%,
+            100% 68.214%,
+            100.03% 73.096%,
+            100.007% 77.829%,
+            99.935% 82.325%,
+            99.818% 86.5%,
+            99.66% 90.268%,
+            99.467% 93.543%,
+            99.241% 96.239%,
+            98.988% 98.271%,
+            98.711% 99.554%,
+            98.415% 100%);
+}
+
+.email-input i {
+    color: #ff3da1;
+    font-size: 16px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.email-input input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 16px;
+    font-weight: 500;
+    color: #40c8f4;
+}
+
+.email-input input::placeholder {
+    color: #40c8f4;
+    opacity: 1;
+}
+
+.play-now-btn {
+    background: #53d6f2;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 220px;
+    transition: all 0.3s ease;
+    clip-path: polygon(100% 31.786%,
+            97.914% 83.571%,
+            97.914% 83.571%,
+            97.759% 86.331%,
+            97.527% 88.914%,
+            97.224% 91.294%,
+            96.857% 93.443%,
+            96.434% 95.335%,
+            95.961% 96.943%,
+            95.444% 98.24%,
+            94.891% 99.2%,
+            94.308% 99.796%,
+            93.703% 100%,
+            7.587% 100%,
+            7.587% 100%,
+            6.982% 99.796%,
+            6.399% 99.2%,
+            5.846% 98.24%,
+            5.329% 96.943%,
+            4.856% 95.335%,
+            4.432% 93.443%,
+            4.066% 91.294%,
+            3.763% 88.914%,
+            3.531% 86.331%,
+            3.376% 83.571%,
+            1.29% 31.786%,
+            1.29% 31.786%,
+            1.184% 26.904%,
+            1.265% 22.171%,
+            1.519% 17.675%,
+            1.931% 13.5%,
+            2.485% 9.732%,
+            3.166% 6.457%,
+            3.96% 3.761%,
+            4.852% 1.729%,
+            5.825% 0.446%,
+            6.866% 0%,
+            94.423% 0%,
+            94.423% 0%,
+            95.464% 0.446%,
+            96.438% 1.729%,
+            97.33% 3.761%,
+            98.124% 6.457%,
+            98.805% 9.732%,
+            99.359% 13.5%,
+            99.771% 17.675%,
+            100.025% 22.171%,
+            100.106% 26.904%,
+            100% 31.786%);
+}
+
+.play-now-btn:hover {
+    background: #40c8f4;
+    transform: scale(1.05);
+    animation: wobble 2s ease
+}
+
+@keyframes wobble {
+    0% {
+        transform: rotate(0)
+    }
+
+    30% {
+        transform: rotate(5deg)
+    }
+
+    60% {
+        transform: rotate(0)
+    }
+
+    80% {
+        transform: rotate(5deg)
+    }
+
+    to {
+        transform: rotate(0)
+    }
+}
+
+/* Right Side Image */
+.free-stuff-image {
+    position: absolute;
+    top: 50%;
+    right: -40px;
+    transform: translateY(-50%) rotate(4deg);
+    width: 912px;
+    height: auto;
+}
+
+.free-stuff-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/*     Tablet View (1024px and below) */
+@media (max-width: 1024px) {
+    .free-stuff-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 90%;
+        padding: 40px;
+        margin: 80px auto;
+    }
+
+    .free-stuff-content {
+        padding-left: 0;
+        max-width: 100%;
+    }
+
+    .free-stuff-content h2 {
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+    .free-stuff-content p {
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 15px;
+    }
+
+    .email-input {
+        width: 100%;
+        padding: 12px;
+        gap: 8px;
+    }
+
+    .play-now-btn {
+        width: 180px;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .free-stuff-image {
+        position: static;
+        transform: none;
+        max-width: 600px;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+/*     Mobile View (768px and below) */
+@media (max-width: 768px) {
+    .free-stuff-section {
+        padding: 30px;
+        margin: 40px auto;
+        border-radius: 15px;
+    }
+
+    .free-stuff-content h2 {
+        font-size: 26px;
+    }
+
+    .free-stuff-content p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .email-input {
+        padding: 10px;
+    }
+
+    .play-now-btn {
+        width: 160px;
+        padding: 10px 18px;
+        font-size: 13px;
+    }
+
+    .free-stuff-image {
+        max-width: 100%;
+    }
+
+    .two-column-container {
+        margin: 20px 0;
+    }
+}
+
+/*     Small Mobile View (480px and below) */
+@media (max-width: 480px) {
+    .free-stuff-section {
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .free-stuff-content h2 {
+        font-size: 22px;
+    }
+
+    .free-stuff-content p {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .email-input {
+        padding: 8px;
+    }
+
+    .play-now-btn {
+        width: 140px;
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    .free-stuff-image img {
+        border-radius: 10px;
+    }
+}
+
+.title2 {
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 50px;
+    color: rgba(64, 200, 244, 1);
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Category Tabs */
+.categories2 {
+    display: flex;
+    justify-content: center;
+    border-radius: 40px;
+    gap: 1px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Category Buttons */
+.category2 {
+    background: rgba(179, 246, 255, 1);
+    border: 0;
+    padding: 12px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    min-width: 120px;
+    height: 60px;
+    text-align: center;
+    color: #444;
+    clip-path: polygon(100% 100%,
+            0.261% 100%,
+            0.261% 100%,
+            0.96% 99.87%,
+            1.541% 99.468%,
+            2.021% 98.778%,
+            2.414% 97.784%,
+            2.736% 96.469%,
+            3.002% 94.816%,
+            3.227% 92.809%,
+            3.427% 90.432%,
+            3.616% 87.668%,
+            3.81% 84.5%,
+            3.81% 84.5%,
+            3.978% 81.338%,
+            4.204% 76.678%,
+            4.478% 70.785%,
+            4.789% 63.924%,
+            5.127% 56.359%,
+            5.48% 48.356%,
+            5.839% 40.179%,
+            6.191% 32.092%,
+            6.527% 24.361%,
+            6.836% 17.25%,
+            6.836% 17.25%,
+            7.021% 14.367%,
+            7.324% 11.664%,
+            7.734% 9.169%,
+            8.241% 6.912%,
+            8.835% 4.922%,
+            9.504% 3.228%,
+            10.24% 1.86%,
+            11.031% 0.846%,
+            11.867% 0.216%,
+            12.738% 0%,
+            87.523% 0%,
+            87.523% 0%,
+            88.404% 0.216%,
+            89.246% 0.846%,
+            90.039% 1.86%,
+            90.776% 3.228%,
+            91.446% 4.922%,
+            92.039% 6.912%,
+            92.547% 9.169%,
+            92.96% 11.664%,
+            93.268% 14.367%,
+            93.463% 17.25%,
+            93.463% 17.25%,
+            93.761% 24.361%,
+            94.089% 32.092%,
+            94.435% 40.179%,
+            94.789% 48.356%,
+            95.139% 56.359%,
+            95.475% 63.924%,
+            95.785% 70.785%,
+            96.058% 76.678%,
+            96.284% 81.338%,
+            96.451% 84.5%,
+            96.451% 84.5%,
+            96.645% 87.668%,
+            96.835% 90.432%,
+            97.034% 92.809%,
+            97.259% 94.816%,
+            97.525% 96.469%,
+            97.847% 97.784%,
+            98.24% 98.778%,
+            98.72% 99.468%,
+            99.302% 99.87%,
+            100% 100%);
+}
+
+/* Active Category */
+.category2.active {
+    background: rgba(64, 200, 244, 1);
+    color: white;
+    font-size: 16px;
+    padding: 16px 22px;
+    transform: scale(1.1);
+}
+
+/* Cards Section */
+.grid-container2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: 40px;
+    padding-left: 120px;
+    padding-right: 120px;
+    margin: 0 auto;
+    background: rgb(64, 200, 244, 1);
+    z-index: 1;
+    clip-path: polygon(100% 0%,
+            100% 79.725%,
+            100% 79.725%,
+            99.832% 83.999%,
+            99.377% 87.428%,
+            98.706% 90.104%,
+            97.892% 92.122%,
+            97.005% 93.573%,
+            96.119% 94.552%,
+            95.304% 95.151%,
+            94.633% 95.464%,
+            94.178% 95.583%,
+            94.01% 95.602%,
+            1.052% 100%,
+            0% 100%,
+            0% 0%,
+            100% 0%);
+}
+
+.thelatest-background {
+    position: absolute;
+    z-index: 10;
+    left: -10px;
+    top: 150px;
+    width: 10%;
+}
+
+.thelatest2-background {
+    position: absolute;
+    z-index: 0;
+    right: 5px;
+    top: 100px;
+    width: 10%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .categories2 {
+        display: flex;
+        overflow-x: scroll;
+        flex-wrap: nowrap;
+        padding: 0px;
+    }
+
+    .category2 {
+        flex-shrink: 0;
+    }
+
+    .grid-container2 {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 768px) {
+    .categories2 {
+        display: flex;
+        overflow-x: scroll;
+        gap: 0px;
+        padding: 0px;
+    }
+
+    .category2 {
+        flex-shrink: 0;
+    }
+
+    .title2 {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: unset;
+        margin-bottom: 16px;
+        font-size: 22px;
+    }
+
+    .grid-container2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) !important;
+        padding: 20px;
+        width: 100%;
+        clip-path: unset;
+    }
+
+    .categories2::-webkit-scrollbar {
+        display: none;
+    }
+
+    .categories2::-webkit-scrollbar {
+        display: none;
+    }
+
+    .discount {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .categories2 {
+        padding: 0px;
+    }
+
+    .category2 {
+        font-size: 11px;
+        padding: 8px 12px;
+    }
+
+    .grid-container2 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .title2 {
+        font-size: 24px;
+    }
+
+    .card h3 {
+        font-size: 12px;
+    }
+
+    .card p {
+        font-size: 10px;
+    }
+}
+
+.game-image2 img {
+    width: 90%;
+    border-radius: 20px;
+    display: block;
+}
+
+.game-section2 {
+    background: #a5ebff;
+    padding: 100px 0;
+    margin-top: 10%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+
+
+/*     General Section */
+.carousel-section {
+    width: 100%;
+    max-width: 1920px;
+    height: 509px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 14px;
+    background-image: url("https://www.worshiphousekids.com/cdn/shop/files/Group_32.png?v=1728236473");
+    background-position: relative;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+/*     Title */
+.carousel-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: #40c8f4;
+    text-align: center;
+    width: 100%;
+}
+
+/*     Wrapper */
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 1200px;
+    height: 400px;
+    overflow: hidden;
+}
+
+/*     Track */
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1100px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    align-items: center;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    gap: 16px;
+}
+
+/*     Default Image Size (Side Images) */
+.carousel-item {
+    width: 180px;
+    height: 180px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out, width 0.6s ease-in-out;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/*     Larger Middle Image */
+.carousel-item.active {
+    width: 260px;
+    height: 260px;
+    transform: scale(1.2);
+}
+
+/*     Slightly Larger Side Images */
+.carousel-item.left,
+.carousel-item.right {
+    width: 200px;
+    height: 200px;
+}
+
+/*     Navigation Buttons (Fixed & Visible) */
+.nav-btn {
+    width: 52px;
+    height: 52px;
+    background: #ec007a;
+    border: 1px solid #ec007a;
+    border-radius: 160px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    z-index: 100;
+}
+
+/*     Position Left & Right Arrows */
+#prevBtn {
+    left: 50px;
+}
+
+#nextBtn {
+    right: 50px;
+}
+
+@media (max-width: 1024px) {
+    .carousel-section .nav-btn {
+        display: none;
+    }
+}
+
+/*     Responsive Mobile Design Without Buttons */
+@media (max-width: 768px) {
+    .carousel-section {
+        width: 100%;
+        height: auto;
+        padding: 20px 10px;
+        gap: 20px;
+        height: auto;
+        padding-bottom: 100px;
+        background-size: contain;
+        background-position: bottom center;
+    }
+
+    .carousel-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #40c8f4;
+        text-align: center;
+    }
+
+    /*     Wrapper */
+    .carousel-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    /*     Track */
+    .carousel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .carousel-track {
+        display: flex;
+        align-items: center;
+        transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        gap: 8px;
+    }
+
+    /*     Default Image Size (Side Images) */
+    .carousel-item {
+        width: 100px;
+        height: 100px;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+        overflow: hidden;
+        transition: transform 0.6s ease-in-out, width 0.6s ease-in-out;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    /*     Larger Middle Image */
+    .carousel-item.active {
+        width: 140px;
+        height: 140px;
+        transform: scale(1.1);
+    }
+
+    /*     Slightly Larger Side Images */
+    .carousel-item.left,
+    .carousel-item.right {
+        width: 120px;
+        height: 120px;
+    }
+
+    .carousel-section .nav-btn {
+        display: none;
+    }
+}
+
+/*     Small Mobile Devices (Extra Optimization) */
+@media (max-width: 480px) {
+    .carousel-title {
+        font-size: 24px;
+    }
+
+    .carousel-item {
+        width: 80px;
+        height: 80px;
+    }
+
+    .carousel-item.active {
+        width: 120px;
+        height: 120px;
+    }
+
+    .carousel-item.left,
+    .carousel-item.right {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/*     Testimonials Section */
+.testimonials {
+    width: 100%;
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+/*     Title */
+.testimonial-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #ff007a;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+/*     Carousel Container */
+.testimonial-carousel {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+/*     Track with Infinite Loop */
+.testimonial-track {
+    display: flex;
+    gap: 40px;
+    transition: transform 0.5s ease-in-out;
+    width: max-content;
+    position: relative;
+    padding: 50px;
+    width: auto;
+    white-space: nowrap;
+}
+
+/*     Testimonial Cards */
+.testimonial-card {
+    width: 450px;
+    height: 500px;
+    padding: 60px 40px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    animation: waveMotion 6s ease-in-out infinite alternate;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*     Background Colors */
+.testimonial-card:nth-child(5n + 1) {
+    background: #4364ad;
+}
+
+.testimonial-card:nth-child(5n + 2) {
+    background: #f466af;
+}
+
+.testimonial-card:nth-child(5n + 3) {
+    background: #40c8f4;
+}
+
+.testimonial-card:nth-child(5n + 4) {
+    background: #ffa07a;
+}
+
+.testimonial-card:nth-child(5n + 5) {
+    background: #f466af;
+
+}
+
+.testimonial-card:nth-child(odd) {
+    animation-delay: 0s;
+}
+
+.testimonial-card:nth-child(even) {
+    animation-delay: 1s;
+}
+
+/* Wave Animation */
+@keyframes waveMotion {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/*     Quote Box */
+.quote-box {
+    width: 170px;
+    height: 110px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    border-radius: 50px;
+}
+
+/*     Quote Icon */
+.quote-box .quote {
+    font-size: 46px;
+    font-weight: bold;
+    color: white;
+    opacity: 0.8;
+}
+
+.testimonial-card h3 {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 25.81px;
+    letter-spacing: 0;
+    text-align: center;
+    color: white;
+}
+
+.testimonial-card p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: center;
+    color: white;
+    text-wrap: auto;
+}
+
+/*     NEW PRODUCTS SECTION */
+.new-products-section {
+    text-align: center;
+    padding: 50px 0;
+    background: #ffffff;
+}
+
+.new-products-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #00bfff;
+    text-align: center;
+}
+
+/*     Glide Carousel */
+.new-carousel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px;
+}
+
+/*     Glide Track */
+.new-carousel {
+    overflow: hidden;
+    width: 100%;
+}
+
+.new-carousel-track {
+    display: flex;
+    gap: 20px;
+}
+
+/*     Individual Carousel Item */
+.new-carousel-item {
+    flex: 0 0 270px;
+}
+
+.new-product-card {
+    width: 270px;
+    background: white;
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+/*     Product Image */
+.new-product-image {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    /* Fix image height */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.new-product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+}
+
+/*     Discount Label */
+.new-discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #ec007a;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 8px;
+}
+
+/*  Product Details */
+.new-product-details {
+    padding: 12px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/*  Product Title */
+.new-product-details h3 {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/*     Product Category */
+.new-product-details p {
+    font-size: 12px;
+    color: #888;
+    margin: 0;
+}
+
+/*     Price Container */
+.new-price {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6px;
+    margin-top: 5px;
+}
+
+/*     Current Price */
+.new-current-price {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+
+/*     Old Price */
+.new-old-price {
+    font-size: 12px;
+    color: #ff4081;
+    text-decoration: line-through;
+}
+
+.glide__slides .new-carousel-track {
+    padding: 20px;
+}
+
+/*     Navigation Buttons */
+.glide__arrow {
+    width: 52px;
+    height: 52px;
+    background: #ec007a;
+    border: none;
+    outline: none;
+    border-radius: 160px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+}
+
+.glide__arrow--left {
+    left: -70px;
+}
+
+.glide__arrow--right {
+    right: -70px;
+}
+
+.glide__arrow--right img {
+    transform: scaleX(-1);
+    /* Flips the image horizontally */
+}
+
+.glide__arrow img {
+    width: 52px;
+    height: 52px;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    z-index: 100;
+}
+
+/*     Blog Section - Unique Wrapper */
+.blog-section {
+    display: flex;
+    background-color: #f466af;
+    padding: 60px;
+    max-height: 814px;
+    max-width: 100%;
+    clip-path: polygon(-9% 0%, 100% 0, 100% 100%, 0% 100%);
+    border-top-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    background-image: url(../images/Group_289221.png);
+    background-position: center;
+    background-size: cover;
+}
+
+/*     Blog Intro - Left Side */
+.blog-intro {
+    flex: 1;
+    padding: 127px 20px 20px;
+    background-color: transparent;
+    color: #fff;
+    max-width: 531px;
+}
+
+.blog-intro h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 42px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.blog-intro p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #eeeeee;
+    margin-bottom: 20px;
+}
+
+/*   Filter Buttons */
+.blog-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.blog-filters .filter-btn {
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    clip-path: polygon(100% 31.786%,
+            97.914% 83.571%,
+            97.914% 83.571%,
+            97.759% 86.331%,
+            97.527% 88.914%,
+            97.224% 91.294%,
+            96.857% 93.443%,
+            96.434% 95.335%,
+            95.961% 96.943%,
+            95.444% 98.24%,
+            94.891% 99.2%,
+            94.308% 99.796%,
+            93.703% 100%,
+            7.587% 100%,
+            7.587% 100%,
+            6.982% 99.796%,
+            6.399% 99.2%,
+            5.846% 98.24%,
+            5.329% 96.943%,
+            4.856% 95.335%,
+            4.432% 93.443%,
+            4.066% 91.294%,
+            3.763% 88.914%,
+            3.531% 86.331%,
+            3.376% 83.571%,
+            1.29% 31.786%,
+            1.29% 31.786%,
+            1.184% 26.904%,
+            1.265% 22.171%,
+            1.519% 17.675%,
+            1.931% 13.5%,
+            2.485% 9.732%,
+            3.166% 6.457%,
+            3.96% 3.761%,
+            4.852% 1.729%,
+            5.825% 0.446%,
+            6.866% 0%,
+            94.423% 0%,
+            94.423% 0%,
+            95.464% 0.446%,
+            96.438% 1.729%,
+            97.33% 3.761%,
+            98.124% 6.457%,
+            98.805% 9.732%,
+            99.359% 13.5%,
+            99.771% 17.675%,
+            100.025% 22.171%,
+            100.106% 26.904%,
+            100% 31.786%);
+}
+
+.blog-filters .filter-btn.active {
+    background: white;
+    color: #f466af;
+}
+
+.blog-filters .filter-btn:hover {
+    background: white;
+    color: #f466af;
+}
+
+.blog-carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+.blog-carousel-container {
+    flex: 2;
+    padding: 29px;
+    background-color: transparent;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.blog-carousel {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.blog-date {
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.blog-info h3 {
+    font-size: 18px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: white;
+}
+
+.blog-desc {
+    font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: white;
+}
+
+.blog-info a {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-bottom: 8px;
+}
+
+.blog-card {
+    display: flex;
+    background: linear-gradient(180deg, #40c8f4, #04abe1);
+    border-radius: 8px;
+
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.blog-card img {
+    max-width: 440px;
+    max-height: 264px;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .blog-intro {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .blog-section {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .blog-carousel {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        overflow-x: scroll;
+    }
+
+    .blog-card {
+        display: flex;
+        flex-direction: column;
+        max-width: 509px;
+        max-height: 600px;
+        padding-bottom: 100px;
+    }
+
+    .blog-card img {
+        max-width: 233px;
+        max-height: 137px;
+    }
+
+    .blog-carousel-container {
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+}
+
+.footer {
+    background-color: #40c8f4;
+    color: white;
+    max-width: 1640px;
+    height: auto;
+    padding: 80px 0 50px;
+    margin-top: 40px;
+    position: relative;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    padding: 0 50px;
+}
+
+/* Left Section */
+.footer-left {
+    flex: 1;
+    max-width: 400px;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Social Icons - Positioned at the bottom */
+.footer-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer-icons i {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-icons i:hover {
+    transform: scale(1.1);
+    color: #ff4081;
+}
+
+/* Middle Section - Footer Links */
+.footer .footer-links {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 500px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21.11px;
+    letter-spacing: 0%;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+    padding-bottom: 12px;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Right Section - Newsletter */
+.footer-newsletter {
+    flex: 1;
+    max-width: 400px;
+    margin-left: 80px;
+}
+
+.footer-newsletter h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.newsletter-form input {
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+}
+
+.newsletter-form button {
+    background: #ff4081;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    padding: 12px 25px;
+    cursor: pointer;
+    clip-path: polygon(100% 31.786%,
+            97.914% 83.571%,
+            97.914% 83.571%,
+            97.759% 86.331%,
+            97.527% 88.914%,
+            97.224% 91.294%,
+            96.857% 93.443%,
+            96.434% 95.335%,
+            95.961% 96.943%,
+            95.444% 98.24%,
+            94.891% 99.2%,
+            94.308% 99.796%,
+            93.703% 100%,
+            7.587% 100%,
+            7.587% 100%,
+            6.982% 99.796%,
+            6.399% 99.2%,
+            5.846% 98.24%,
+            5.329% 96.943%,
+            4.856% 95.335%,
+            4.432% 93.443%,
+            4.066% 91.294%,
+            3.763% 88.914%,
+            3.531% 86.331%,
+            3.376% 83.571%,
+            1.29% 31.786%,
+            1.29% 31.786%,
+            1.184% 26.904%,
+            1.265% 22.171%,
+            1.519% 17.675%,
+            1.931% 13.5%,
+            2.485% 9.732%,
+            3.166% 6.457%,
+            3.96% 3.761%,
+            4.852% 1.729%,
+            5.825% 0.446%,
+            6.866% 0%,
+            94.423% 0%,
+            94.423% 0%,
+            95.464% 0.446%,
+            96.438% 1.729%,
+            97.33% 3.761%,
+            98.124% 6.457%,
+            98.805% 9.732%,
+            99.359% 13.5%,
+            99.771% 17.675%,
+            100.025% 22.171%,
+            100.106% 26.904%,
+            100% 31.786%);
+    font-weight: 700;
+    border-radius: 30px;
+    transition: transform 0.2s ease;
+    width: 351px;
+    height: 56px;
+}
+
+.newsletter-form button:hover {
+    background: #e91e63;
+}
+
+/* Copyright Section */
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+/*     Tablet View (1024px and below) */
+@media (max-width: 1024px) {
+    .footer-newsletter {
+        margin-left: 0;
+    }
+
+    .footer-icons {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .newsletter-form {
+        display: none;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-newsletter {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer-links ul {
+        padding: 0;
+    }
+
+    .footer-links li {
+        margin-bottom: 5px;
+    }
+
+    .glide__arrow {
+        display: none;
+    }
+}
+
+/*     Mobile View (768px and below) */
+@media (max-width: 768px) {
+    .footer {
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .footer-left {
+        max-width: 100%;
+    }
+
+    .footer-links {
+        gap: 15px;
+    }
+
+    .footer-links ul {
+        text-align: center;
+    }
+
+    .footer-links ul li a {
+        font-size: 16px;
+    }
+
+    .footer-newsletter h3 {
+        font-size: 20px;
+    }
+
+    .footer-newsletter p {
+        font-size: 13px;
+    }
+
+    .newsletter-form {
+        gap: 10px;
+    }
+
+    .newsletter-form input {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .newsletter-form button {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+    }
+
+    .glide__arrow {
+        display: none;
+    }
+
+    .title {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: unset;
+        margin-bottom: 16px;
+        font-size: 22px;
+    }
+
+    .testimonial-title {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .new-products-title {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .game-section2 {
+        margin: 20px 0;
+    }
+
+    .testimonials {
+        padding: 20px 0;
+    }
+
+    .testimonial-track {
+        padding: 20px 50px;
+    }
+
+    .new-products-section {
+        padding: 20px 0;
+    }
+
+    .testimonial-card {
+        padding: 20px;
+        height: 220px;
+    }
+
+    .new-carousel-container {
+        padding: 20px 0;
+    }
+
+    .blog-intro h2 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .blog-intro p {
+        text-align: center;
+    }
+}
+
+/*     Small Mobile View (480px and below) */
+@media (max-width: 480px) {
+    .footer {
+        padding: 40px 15px;
+    }
+
+    .footer-left p {
+        font-size: 12px;
+    }
+
+    .footer-links {
+        gap: 10px;
+    }
+
+    .footer-links ul li a {
+        font-size: 14px;
+    }
+
+    .footer-newsletter h3 {
+        font-size: 18px;
+    }
+
+    .footer-newsletter p {
+        font-size: 12px;
+    }
+
+    .newsletter-form input {
+        height: 38px;
+        font-size: 12px;
+    }
+
+    .newsletter-form button {
+        height: 38px;
+        font-size: 12px;
+    }
+
+    .footer-bottom {
+        font-size: 11px;
+    }
+}
