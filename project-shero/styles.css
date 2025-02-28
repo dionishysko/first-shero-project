@@ -23,85 +23,39 @@ body {
 /* First Row (Logo, Search Bar, Icons) */
 .top-row {
     display: flex;
-    justify-content: space-between;
-    width: 85%;
-    gap: 10px;
+    justify-content: center;
+    width: 100%;
 }
 
 .logo img {
     max-width: 100%;
     z-index: 1;
     position: relative;
+    padding-right: 100px;
 }
 
 .search-bar {
+    width: 50%;
     display: flex;
     align-items: center;
     padding: 10px;
-    border-radius: 20px;
-    flex-grow: 1;
     max-width: 891px;
     border: none;
     outline: none;
     font-size: 16px;
     background-color: white;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    clip-path: polygon(98.415% 100%,
-            1.951% 100%,
-            1.951% 100%,
-            1.655% 99.554%,
-            1.379% 98.271%,
-            1.125% 96.239%,
-            0.9% 93.543%,
-            0.706% 90.268%,
-            0.549% 86.5%,
-            0.432% 82.325%,
-            0.36% 77.829%,
-            0.336% 73.096%,
-            0.367% 68.214%,
-            0.959% 16.429%,
-            0.959% 16.429%,
-            1.003% 13.669%,
-            1.069% 11.086%,
-            1.155% 8.706%,
-            1.26% 6.557%,
-            1.38% 4.665%,
-            1.514% 3.057%,
-            1.661% 1.76%,
-            1.818% 0.8%,
-            1.984% 0.204%,
-            2.156% 0%,
-            98.21% 0%,
-            98.21% 0%,
-            98.382% 0.2%,
-            98.548% 0.783%,
-            98.705% 1.726%,
-            98.852% 3.006%,
-            98.987% 4.598%,
-            99.107% 6.48%,
-            99.211% 8.628%,
-            99.297% 11.017%,
-            99.363% 13.625%,
-            99.407% 16.429%,
-            100% 68.214%,
-            100% 68.214%,
-            100.03% 73.096%,
-            100.007% 77.829%,
-            99.935% 82.325%,
-            99.818% 86.5%,
-            99.66% 90.268%,
-            99.467% 93.543%,
-            99.241% 96.239%,
-            98.988% 98.271%,
-            98.711% 99.554%,
-            98.415% 100%);
+    clip-path: polygon(98.415% 100%, 1.951% 100%, 1.951% 100%, 1.655% 99.554%, 1.379% 98.271%, 1.125% 96.239%, .9% 93.543%, .706% 90.268%, .549% 86.5%, .432% 82.325%, .36% 77.829%, .336% 73.096%, .367% 68.214%, .959% 16.429%, .959% 16.429%, 1.003% 13.669%, 1.069% 11.086%, 1.155% 8.706%, 1.26% 6.557%, 1.38% 4.665%, 1.514% 3.057%, 1.661% 1.76%, 1.818% .8%, 1.984% .204%, 2.156% 0%, 98.21% 0%, 98.21% 0%, 98.382% .2%, 98.548% .783%, 98.705% 1.726%, 98.852% 3.006%, 98.987% 4.598%, 99.107% 6.48%, 99.211% 8.628%, 99.297% 11.017%, 99.363% 13.625%, 99.407% 16.429%, 100% 68.214%, 100% 68.214%, 100.03% 73.096%, 100.007% 77.829%, 99.935% 82.325%, 99.818% 86.5%, 99.66% 90.268%, 99.467% 93.543%, 99.241% 96.239%, 98.988% 98.271%, 98.711% 99.554%, 98.415% 100%);
 }
 
 .search-bar input {
     border: none;
     outline: none;
-    padding: 5px;
     width: 100%;
+}
+
+.search-bar ::placeholder {
+    color: #00aaff;
 }
 
 .search-bar button {
@@ -109,6 +63,7 @@ body {
     border: none;
     cursor: pointer;
     color: #00aaff;
+    padding: 10px;
 }
 
 .icons {
@@ -117,59 +72,10 @@ body {
     align-items: center;
     justify-content: center;
     border: none;
-    border-radius: 20px;
     background-color: rgba(66, 204, 246, 1);
     min-width: 120px;
     min-height: 56px;
-    clip-path: polygon(100% 31.786%,
-            96.488% 83.571%,
-            96.488% 83.571%,
-            96.227% 86.331%,
-            95.837% 88.914%,
-            95.327% 91.294%,
-            94.71% 93.443%,
-            93.997% 95.335%,
-            93.201% 96.943%,
-            92.331% 98.24%,
-            91.4% 99.2%,
-            90.419% 99.796%,
-            89.4% 100%,
-            12.771% 100%,
-            12.771% 100%,
-            11.752% 99.796%,
-            10.771% 99.2%,
-            9.84% 98.24%,
-            8.971% 96.943%,
-            8.174% 95.335%,
-            7.461% 93.443%,
-            6.844% 91.294%,
-            6.335% 88.914%,
-            5.944% 86.331%,
-            5.683% 83.571%,
-            2.171% 31.786%,
-            2.171% 31.786%,
-            1.993% 26.904%,
-            2.13% 22.171%,
-            2.557% 17.675%,
-            3.25% 13.5%,
-            4.183% 9.732%,
-            5.33% 6.457%,
-            6.666% 3.761%,
-            8.167% 1.729%,
-            9.806% 0.446%,
-            11.558% 0%,
-            90.613% 0%,
-            90.613% 0%,
-            92.366% 0.446%,
-            94.005% 1.729%,
-            95.505% 3.761%,
-            96.841% 6.457%,
-            97.989% 9.732%,
-            98.921% 13.5%,
-            99.614% 17.675%,
-            100.041% 22.171%,
-            100.179% 26.904%,
-            100% 31.786%);
+    clip-path: polygon(100% 31.786%, 96.488% 83.571%, 96.488% 83.571%, 96.227% 86.331%, 95.837% 88.914%, 95.327% 91.294%, 94.71% 93.443%, 93.997% 95.335%, 93.201% 96.943%, 92.331% 98.24%, 91.4% 99.2%, 90.419% 99.796%, 89.4% 100%, 12.771% 100%, 12.771% 100%, 11.752% 99.796%, 10.771% 99.2%, 9.84% 98.24%, 8.971% 96.943%, 8.174% 95.335%, 7.461% 93.443%, 6.844% 91.294%, 6.335% 88.914%, 5.944% 86.331%, 5.683% 83.571%, 2.171% 31.786%, 2.171% 31.786%, 1.993% 26.904%, 2.13% 22.171%, 2.557% 17.675%, 3.25% 13.5%, 4.183% 9.732%, 5.33% 6.457%, 6.666% 3.761%, 8.167% 1.729%, 9.806% .446%, 11.558% 0%, 90.613% 0%, 90.613% 0%, 92.366% .446%, 94.005% 1.729%, 95.505% 3.761%, 96.841% 6.457%, 97.989% 9.732%, 98.921% 13.5%, 99.614% 17.675%, 100.041% 22.171%, 100.179% 26.904%, 100% 31.786%);
 }
 
 .icons i {
@@ -196,9 +102,9 @@ body {
     list-style: none;
     display: flex;
     justify-content: space-between;
-    gap: 40px;
+    gap: 57px;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 30px;
     width: 100%;
 }
 
@@ -216,6 +122,7 @@ body {
     font-size: 16px;
     font-weight: bold;
     border: none;
+    margin-left: 70px;
     border-radius: 10px;
     cursor: pointer;
 }
@@ -287,12 +194,12 @@ body {
 
 .navbar {
     background: linear-gradient(to right, #2db2ff, #00aaff);
-    padding: 15px 20px;
+    padding: 35px 10px;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     z-index: 10;
     position: relative;
     width: 100%;
@@ -319,6 +226,12 @@ body {
     text-align: center;
     padding: 10px;
     font-weight: bold;
+}
+
+.vektor-header {
+    position: absolute;
+    bottom: -6px;
+    width: 100%;
 }
 
 @media (max-width: 1024px) {
@@ -349,11 +262,19 @@ body {
         width: 100%;
         flex-wrap: wrap;
     }
+
+    .vektor-header {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
     .pink-bar {
         display: block;
+    }
+
+    .vektor-header {
+        display: none;
     }
 
     .navbar {
@@ -422,6 +343,7 @@ body {
         color: white;
         font-size: 18px;
     }
+
     .search-bar {
         display: none;
     }
@@ -457,6 +379,22 @@ body {
 }
 
 /* Container for the section */
+
+.background-shape{
+    position: absolute;
+    z-index: -1;
+    left: 80%;
+    top: 50%;
+    width: 25%;
+}
+
+.background-shape2{
+    position: absolute;
+        z-index: -1;
+        width: 374px;
+        height: 300px;
+        top: 50%;
+}
 .slideshow-section {
     position: relative;
     width: 80%;
@@ -467,6 +405,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 2;
+}
+
+.slideshow-section::before {
+    content: '';
+    background-image: url(/project-shero/images/shape-carousel.jpg);
 }
 
 /* Image display area */
@@ -503,7 +447,10 @@ body {
 /* Right Arrow - Bright Pink */
 .right-button {
     background-color: #f466af;
+    transform: rotate(180deg);
+    /* Rotate right arrow to face right */
 }
+
 
 /*     Tablet View (1024px and below) */
 @media (max-width: 1024px) {
@@ -530,6 +477,9 @@ body {
         width: 100%;
         margin: 20px auto;
     }
+    .background-shape{display: none;}
+    .background-shape2{display: none;}
+
 
     .slideshow-images {
         width: 100%;
@@ -557,6 +507,10 @@ body {
         width: 100%;
         margin: 40px auto;
     }
+    .background-shape{display: none;}
+    .background-shape2{display: none;}
+
+
 
     .slideshow-images img {
         width: 100%;
@@ -603,7 +557,6 @@ body {
     position: relative;
     z-index: 2;
     margin-bottom: 0;
-    margin-left: 7%;
     border: none;
     display: inline-flex;
 
@@ -613,17 +566,17 @@ body {
     display: none;
 }
 
+
 /* Category Buttons */
 .category {
     background: #ffcbe4;
     border: 0;
     padding: 12px 18px;
     font-size: 14px;
-    text-transform: uppercase;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
-    min-width: 120px;
+    min-width: 175px;
     height: 60px;
     text-align: center;
     color: #444;
@@ -777,6 +730,7 @@ body {
 
 /* Cards Section */
 .grid-container {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
@@ -812,15 +766,14 @@ body {
     position: absolute;
     z-index: -1;
     left: 1px;
-    width: 10%;
+    width: 20%;
 }
 
 .bestseller2-background {
     position: absolute;
     z-index: -1;
     right: 2px;
-    width: 235px;
-    height: 231px;
+    top: 40%f;
 }
 
 /* Individual Card */
@@ -836,7 +789,8 @@ body {
 /* Card Image */
 .card img {
     width: 100%;
-    height: auto;
+    max-width: 389px;
+    max-height: 177px;
     object-fit: cover;
 }
 
@@ -923,7 +877,9 @@ body {
         text-transform: uppercase;
         font-weight: bold;
         cursor: pointer;
-        min-width: 100px;
+        min-width: 175px;
+        height: 60px;
+
         border-radius: 10px;
         text-align: center;
         color: #444;
@@ -1012,7 +968,6 @@ body {
     width: 100%;
     height: 100px;
     background-color: #f2785f;
-    border-bottom: 12px solid #ff3da1;
     transform: rotate(-1.422deg);
     padding-top: 17px;
     top: -90px;
@@ -1062,19 +1017,29 @@ body {
     margin: 0 10px;
 }
 
-/* Game Section Background */
-.game-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    max-width: 1628px;
-    margin: auto;
-    gap: 1px;
+
+
+.polygon {
+    position: absolute;
+    left: 79%;  
+    bottom: 170px;
+    z-index: 0;
+    pointer-events: none;
 }
+
+.polygon2 {
+    position: absolute;
+    left: 80%;
+    top: 70%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+
 
 /* Game Container */
 .game-container {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -1098,6 +1063,8 @@ body {
     margin-left: 30px;
     width: 538px;
     height: 157px;
+    z-index: 11111111;
+    margin-bottom: 100px;
 }
 
 .game-content h2 {
@@ -1140,7 +1107,6 @@ body {
     padding: 12px 25px;
     font-size: 16px;
     font-weight: bold;
-    border-radius: 30px;
     cursor: pointer;
     transition: transform 0.2s ease;
     width: 351px;
@@ -1310,18 +1276,27 @@ body {
     .play-banner-content span {
         font-size: 24px;
     }
+    .polygon{
+        display: none;
+    }
+    .polygon2{
+        display: none;
+    }
 }
 
 /*     Small Mobile View (480px and below) */
 @media (max-width: 480px) {
-    .game-section {
-        padding: 30px 5px;
-        border-radius: 30px;
-    }
-
+    
     .game-container {
         padding: 10px;
         text-align: center;
+        margin: 0;
+    }
+    .polygon{
+        display: none;
+    }
+    .polygon2{
+        display: none;
     }
 
     .game-image img {
@@ -1330,17 +1305,26 @@ body {
         height: auto;
         box-shadow: -10px -10px rgb(84, 200, 244, 0.49);
     }
-
+    .game-image2 img{
+        width: 100%;
+        margin-left: 20px;
+        max-width: 300px;
+        height: auto;
+    }
     .game-content h2 {
         font-size: 18px;
+        margin: 0;  
+
     }
 
     .subtitle {
         font-size: 12px;
+        margin: 0;  
     }
 
     .description {
         font-size: 11px;
+        margin: 0;
     }
 
     .play-button {
@@ -1363,21 +1347,17 @@ body {
 .free-stuff-section {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     background: #ff3da1;
     padding: 50px;
     border-radius: 20px;
     margin: 100px auto;
-    width: 1644px;
+    width: 90%;
     position: relative;
-    overflow: hidden;
 }
 
 /* Left Side Content */
 .free-stuff-content {
-    flex: 1;
     color: white;
-    padding-left: 50px;
     max-width: 517px;
 }
 
@@ -1468,6 +1448,24 @@ body {
     justify-content: center;
 }
 
+/* Right Side Image */
+.free-stuff-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    max-width: 100px;
+
+}
+
+.free-stuff-image img {
+    border-radius: 20px;
+    /* box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.2); */
+    max-width: 750px;
+
+}
+
+
 .email-input input {
     border: none;
     outline: none;
@@ -1480,6 +1478,19 @@ body {
 .email-input input::placeholder {
     color: #40c8f4;
     opacity: 1;
+}
+
+.background-stuff {
+    position: absolute;
+    left: 40%;
+    top: 5%;
+    
+}
+
+.background-stuff2 {
+    position: absolute;
+    top: 65%;
+    left: 35%;
 }
 
 .play-now-btn {
@@ -1572,22 +1583,6 @@ body {
     }
 }
 
-/* Right Side Image */
-.free-stuff-image {
-    position: absolute;
-    top: 50%;
-    right: -40px;
-    transform: translateY(-50%) rotate(4deg);
-    width: 912px;
-    height: auto;
-}
-
-.free-stuff-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.2);
-}
 
 /*     Tablet View (1024px and below) */
 @media (max-width: 1024px) {
@@ -1639,6 +1634,9 @@ body {
 
 /*     Mobile View (768px and below) */
 @media (max-width: 768px) {
+    .background-stuff{
+        display: none;
+    }
     .free-stuff-section {
         padding: 30px;
         margin: 40px auto;
@@ -1675,6 +1673,9 @@ body {
 
 /*     Small Mobile View (480px and below) */
 @media (max-width: 480px) {
+    .background-stuff{
+        display: none;
+    }
     .free-stuff-section {
         padding: 20px;
         border-radius: 10px;
@@ -1701,7 +1702,10 @@ body {
 
     .free-stuff-image img {
         border-radius: 10px;
+        width: 321px;
+        height: 150px;
     }
+    .background-stuff2{display: none;}
 }
 
 .title2 {
@@ -1734,7 +1738,7 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
-    min-width: 120px;
+    min-width: 175px;
     height: 60px;
     text-align: center;
     color: #444;
@@ -1851,18 +1855,18 @@ body {
 
 .thelatest-background {
     position: absolute;
-    z-index: 10;
+    z-index: -1;
     left: -10px;
-    top: 150px;
-    width: 10%;
+    top: 240px;
+    width: 30%;
 }
 
 .thelatest2-background {
     position: absolute;
-    z-index: 0;
+    z-index: -1;
     right: 5px;
-    top: 100px;
-    width: 10%;
+    top: 250px;
+    width: 20%;
 }
 
 /* Responsive Adjustments */
@@ -1964,7 +1968,7 @@ body {
 
 .game-section2 {
     background: #a5ebff;
-    padding: 100px 0;
+    padding: 50px 0;
     margin-top: 10%;
     position: relative;
     overflow: hidden;
@@ -2092,6 +2096,9 @@ body {
 
 #nextBtn {
     right: 50px;
+    transform: rotate(180deg);
+    /* Rotate right arrow to face right */
+
 }
 
 @media (max-width: 1024px) {
@@ -2347,6 +2354,7 @@ body {
     text-wrap: auto;
 }
 
+
 /*     NEW PRODUCTS SECTION */
 .new-products-section {
     text-align: center;
@@ -2366,7 +2374,6 @@ body {
     position: relative;
     max-width: 1200px;
     margin: auto;
-    padding: 50px;
 }
 
 /*     Glide Track */
@@ -2377,13 +2384,8 @@ body {
 
 .new-carousel-track {
     display: flex;
-    gap: 20px;
 }
 
-/*     Individual Carousel Item */
-.new-carousel-item {
-    flex: 0 0 270px;
-}
 
 .new-product-card {
     width: 270px;
@@ -2401,7 +2403,6 @@ body {
     position: relative;
     width: 100%;
     height: 150px;
-    /* Fix image height */
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -2475,8 +2476,12 @@ body {
     text-decoration: line-through;
 }
 
-.glide__slides .new-carousel-track {
-    padding: 20px;
+/* .glide__slides .new-carousel-track {
+    display: flex;
+    padding: 20px; */
+
+.glide__slide {
+    padding-bottom: 50px;
 }
 
 /*     Navigation Buttons */
@@ -2518,25 +2523,74 @@ body {
     z-index: 100;
 }
 
+.glide__slides {
+    display: flex;
+}
+
+.glide__slide {
+    width: calc(100% / 4);
+    /* Ensure 4 images fit perfectly */
+    flex-shrink: 0;
+}
+
 /*     Blog Section - Unique Wrapper */
+
+.latest-overlay1 {
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    height: 54%;
+    z-index: -5;
+    pointer-events: none;
+}
+
+.latest-overlay2 {
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
+    height: 46%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.latest-overlay3 {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    height: 42%;
+    z-index: -1;
+    pointer-events: none;
+}
+
 .blog-section {
     display: flex;
     background-color: #f466af;
+    position: relative;
     padding: 60px;
     max-height: 814px;
     max-width: 100%;
     clip-path: polygon(-9% 0%, 100% 0, 100% 100%, 0% 100%);
     border-top-left-radius: 80px;
     border-bottom-right-radius: 80px;
-    background-image: url(../images/Group_289221.png);
+    /* background-image: url(../images/Group_289221.png); */
     background-position: center;
     background-size: cover;
+    z-index: 2;
+}
+
+.blog-section::before {
+    content: "";
+    background-image: url("/project-shero/images/blog-vektor.png");
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 /*     Blog Intro - Left Side */
 .blog-intro {
     flex: 1;
-    padding: 127px 20px 20px;
+    /* padding: 127px 20px 20px; */
     background-color: transparent;
     color: #fff;
     max-width: 531px;
@@ -2742,12 +2796,25 @@ body {
     }
 }
 
+.footer-image {
+    position: absolute;
+    top: -18px;
+    left: 0;
+    width: 100%;
+}
+
+.footer-shape {
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+}
+
 .footer {
     background-color: #40c8f4;
     color: white;
     max-width: 1640px;
     height: auto;
-    padding: 80px 0 50px;
+    padding: 80px 50px;
     margin-top: 40px;
     position: relative;
 }
@@ -2850,8 +2917,6 @@ body {
 
 .newsletter-form input {
     width: 100%;
-    height: 45px;
-    padding: 10px;
     border-radius: 5px;
     border: none;
     font-size: 14px;
@@ -2864,6 +2929,7 @@ body {
     padding: 10px;
     font-size: 16px;
     padding: 12px 25px;
+    margin-left: 30px;
     cursor: pointer;
     clip-path: polygon(100% 31.786%,
             97.914% 83.571%,
@@ -2915,7 +2981,6 @@ body {
             100.106% 26.904%,
             100% 31.786%);
     font-weight: 700;
-    border-radius: 30px;
     transition: transform 0.2s ease;
     width: 351px;
     height: 56px;
@@ -2927,11 +2992,14 @@ body {
 
 /* Copyright Section */
 .footer-bottom {
-    text-align: center;
+
+    display: flex;
+    justify-content: space-between;
     padding: 20px;
-    font-size: 14px;
-    margin-top: 30px;
+    align-items: end;
+    bottom: 0;
 }
+
 
 /*     Tablet View (1024px and below) */
 @media (max-width: 1024px) {
@@ -3099,6 +3167,9 @@ body {
 
 /*     Small Mobile View (480px and below) */
 @media (max-width: 480px) {
+    .new-carousel-item{
+        margin-left:80px
+    }
     .footer {
         padding: 40px 15px;
     }
@@ -3106,7 +3177,9 @@ body {
     .footer-left p {
         font-size: 12px;
     }
-
+     .logo img{
+        margin-left:50px;
+    }
     .footer-links {
         gap: 10px;
     }
@@ -3135,5 +3208,11 @@ body {
 
     .footer-bottom {
         font-size: 11px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-image{
+        display: none;
     }
 }
